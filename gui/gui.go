@@ -7,16 +7,16 @@ import (
 	"strconv"
 	"time"
 
-	"reddit-parse/main/logger"
-	"reddit-parse/main/parse"
-	"reddit-parse/main/settings"
-
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/dialog"
 	"fyne.io/fyne/v2/layout"
 	"fyne.io/fyne/v2/widget"
+
+	"reddit-parse/main/logger"
+	"reddit-parse/main/parse"
+	"reddit-parse/main/settings"
 )
 
 func init() {
@@ -83,7 +83,7 @@ func StartGui() {
 	app := app.New()
 	window := app.NewWindow("Телеграм бот")
 	window.Resize(fyne.Size{Width: 500, Height: 300})
-	window.SetFixedSize(true)
+	// window.SetFixedSize(true)
 
 	r, _ := fyne.LoadResourceFromPath("icon.png")
 	window.SetIcon(r)
